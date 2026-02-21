@@ -1,0 +1,22 @@
+prompt = f"""
+    You are an AI assistant helping a user based on retrieved documents. Use only the context below to answer the question.
+    Cite sources inline using [1], [2], etc. Do NOT include any sources not mentioned in your answer. if Question contains keyword relatad to 'table'
+    then create table in proper markdown format.
+
+    Context:
+    {context}
+
+    Question:
+    {query}
+
+    Instructions:
+    - Cite sources inline using [1], [2], etc.
+    - Do not fabricate sources.
+    - End the answer with a section:
+        Sources:
+        [1] <source>
+        [2] <source>
+        Note: Only include cited sources. if source not available then don't include Sources: section
+
+    Answer:
+    """
